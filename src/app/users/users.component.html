@@ -1,0 +1,46 @@
+ <table>
+  <tr>
+    <th rowspan="2">Id</th>
+    <th rowspan="2">Name</th>
+    <th rowspan="2">Username</th>
+     <th rowspan="2">Email</th>
+      <th colspan="6">Address</th>
+      <th rowspan="2">phone</th>
+      <th rowspan="2">website</th>
+      <th colspan="3">Company</th>
+  </tr> 
+
+     <tr>
+        <th>Street</th>
+        <th>Suite</th>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>Geo-lat</th>
+        <th>Geo-lng</th> 
+        <th>Name</th>
+        <th>CatchPhrase</th>
+        <th>Bs</th>     
+    </tr>
+
+     
+  <tr *ngFor="let i of data">
+    
+<ng-container>
+    <td>{{i['id']}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.username}}</td>
+    <td>{{i.email}}</td>
+     <td>{{i['address']['street']}}</td>
+      <td>{{i['address']['suite']}}</td>
+       <td>{{i['address']['city']}}</td>
+        <td>{{i['address']['zipcode']}}</td>
+   <td>{{i['address']['geo']['lat']}}</td>
+     <td>{{i['address']['geo']['lng']}}</td> 
+      <td>{{['phone']}}</td> 
+      <td>{{i['website']}}</td>
+     <td>{{i.company.name}}</td>  
+     <td>{{i.company.catchPhrase}}</td>
+        <td>{{i.company.bs}}</td>
+      </ng-container>
+   </tr>
+</table>

@@ -1,0 +1,38 @@
+<h2 class="heading">Product List</h2><br>
+<!-- <div class="example-box" cdkDrag>
+	Simple card
+
+
+</div>
+ -->
+
+<!-- <pre>{{products | json}}</pre>
+ -->
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+<div *ngFor="let pro of  products"  cdkDrag class="example-box">
+
+
+		<div class="container">
+  <div class="row">
+    <div class="col">
+<img src={{pro.p_img}} alt="">
+    </div>
+</div>
+<br>
+  <div class="row  inforow" >
+    <div class="col">
+     
+<p>Product Name: {{pro.p_name}}</p>
+<p> Product Price: {{pro.p_price}}/-</p>
+<p>Order: {{pro.p_order}}</p>
+    </div>
+  </div>
+</div>
+
+</div>
+  <!-- span>{{pro.getOne()}} </span>
+    <span>{{pro.getTwo()}} </span> -->
+</div>
+
+
+  <div>
